@@ -12,9 +12,5 @@ public class SendMessageEvent extends ListenerAdapter {
         if (args[0].startsWith("/")) {
             CommandHandler.handle(e.getMember(),e.getChannel(),args);
         }
-        if ("SendMessageEvent".equalsIgnoreCase(args[0])) {
-            if (e.getMember().getUser().isBot()) return;
-            e.getChannel().sendMessage("SendMessageEvent " + e.getAuthor().getName() + "!").queue();
-        }
     }
 }
