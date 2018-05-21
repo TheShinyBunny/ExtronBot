@@ -1,6 +1,6 @@
 package com.extron.discord;
 
-import com.extron.discord.events.Hello;
+import com.extron.discord.events.SendMessageEvent;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -15,7 +15,7 @@ public class BotMain {
         jda = new JDABuilder(AccountType.BOT)
                 .setToken("NDQ4MDUyNjUzNjY3Mzg1MzQ0.DeQhcw.Yogazhcdm2Zvkpcu9seHo7Snw-w")
                 .buildBlocking();
-        jda.addEventListener(new Hello());
+        jda.addEventListener(new SendMessageEvent());
     }
 
 }
